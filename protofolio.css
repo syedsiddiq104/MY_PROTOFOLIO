@@ -210,6 +210,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding: 10px;
 }
 
 .wrapper>header {
@@ -217,7 +218,7 @@ html {
   border-radius: 30px;
   height: 50px;
   width: 100%;
-  color: grey;
+  backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -232,7 +233,7 @@ html {
 
 header>a {
   text-decoration: none;
-  color: grey;
+  color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 2vw;
   padding: 1px 20px;
@@ -444,7 +445,6 @@ header > a:hover {
   background: rgba(255, 255, 255, 0.8);
   color: #333;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
   line-height: 40px;
@@ -454,7 +454,7 @@ header > a:hover {
 
 .skills:hover {
   transform: scale(1.2);
-  box-shadow: 12px 12px 18px rgba(0, 0, 0, 1);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.603);
 
 
 }
@@ -770,7 +770,7 @@ header > a:hover {
   justify-content: center;
   gap: 40px;
   margin-top: 40px;
-  /* background-color: #2b5db4; */
+  /* background-color: #2b5db49c; */
   border-radius: 50px;
   padding: 10px;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
