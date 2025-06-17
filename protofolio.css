@@ -590,13 +590,13 @@ header > a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
   transition: backdrop-filter 0.3s ease;
   z-index: 1;
 }
 
 .item:hover::before {
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(10px);
 
 }
 
