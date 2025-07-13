@@ -90,20 +90,12 @@
   max-width: 350px;
   height: auto;
   object-fit: cover;
-  filter: brightness(0.9);
+  /* filter: brightness(0.9); */
   border-radius: 10%;
   /* box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.5); */
   transition: transform 0.3s ease;
-  animation: right 1s ease-in-out;
 }
-@keyframes right{
-  0% {
-    transform: translateX(150%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+
 
 .image img:hover {
   transform: scale(1.1);
@@ -153,6 +145,7 @@
   .image {
     width: 100%;
     margin: 10px 0;
+    
   }
 
   .text h1 {
@@ -177,7 +170,10 @@
   .image img {
     width: 80%;
     max-width: 250px;
+    transition: none;
+    transform: none;
   }
+ 
 }
 
 
@@ -210,7 +206,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 10px;
 }
 
 .wrapper>header {
@@ -218,12 +213,13 @@ html {
   border-radius: 30px;
   height: 50px;
   width: 100%;
-  backdrop-filter: blur(6px);
+  color: grey;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: nowrap;
   position: sticky;
+  backdrop-filter: blur(3px);
   z-index: 2;
   gap: 10px;
   top: 10px;
@@ -233,9 +229,9 @@ html {
 
 header>a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: grey;
   font-weight: 600;
-  font-size: 2vw;
+  font-size: 1.9vw;
   padding: 1px 20px;
   /* border: 2px solid black; */
   border-radius: 30px;
@@ -285,7 +281,13 @@ header > a:hover {
   } */
 
 
-
+  @media screen and (max-width: 767px){
+    header>a {
+      font-size: 15px;
+    
+    }
+    
+  }
 
 
 
@@ -423,15 +425,28 @@ header > a:hover {
 
 /* servicess */
 
-.container.Service {
+.Service {
   flex: 1;
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
   justify-content: space-between;
+}
+
+.service-heading {
+  width: 100%;
+  text-align: center;
+  
+}
+
+.service-heading h2 {
+  font-size: 36px;
+  color: #111010;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 
@@ -440,11 +455,12 @@ header > a:hover {
 .skills {
   flex: 1 1 150px;
   height: 250px;
-  max-width: auto;
+  /* max-width: 250px; */
   padding: 10px;
   background: rgba(255, 255, 255, 0.8);
   color: #333;
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
   line-height: 40px;
@@ -454,7 +470,7 @@ header > a:hover {
 
 .skills:hover {
   transform: scale(1.2);
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.603);
+  box-shadow: 12px 12px 18px rgba(0, 0, 0, 1);
 
 
 }
@@ -536,7 +552,23 @@ header > a:hover {
   color: #ff6f61;
   font-size: 20px;
 }
+@media screen and (max-width: 767px){
+ 
+  .one,
+  .two,
+  .three,
+  .four,
+  .five {
+    animation: none;
+  }
+  .skills:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+}
 
+  
 
 
 
@@ -567,8 +599,11 @@ header > a:hover {
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 30px;
   padding: 20px;
-
 }
+.service-heading{
+  grid-column: 1 / -1;
+}
+
 
 .item {
   position: relative;
@@ -590,13 +625,13 @@ header > a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(10px);
   transition: backdrop-filter 0.3s ease;
   z-index: 1;
 }
 
 .item:hover::before {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
 
 }
 
@@ -680,7 +715,6 @@ header > a:hover {
 
 
 .Contact {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -691,15 +725,14 @@ header > a:hover {
   /* margin: auto; */
 
 }
-
-.container.Contact h2 {
-  font-size: 50px;
+.contact h2 {
+  font-size: 40px;
   color: #111010;
-  margin-left: 200px;
-  margin-bottom: 20px;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .contact form {
   display: flex;
@@ -707,12 +740,12 @@ header > a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  flex: 1 1 150px;
+  flex: 1 1 100px;
   height: 500px;
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  box-shadow: 8px 8px 16px rgb(0, 0, 0);
+  /* box-shadow: 8px 8px 34px rgb(0, 0, 0); */
   gap: 20px;
 
 }
@@ -770,7 +803,7 @@ header > a:hover {
   justify-content: center;
   gap: 40px;
   margin-top: 40px;
-  /* background-color: #2b5db49c; */
+  /* background-color: #2b5db4; */
   border-radius: 50px;
   padding: 10px;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
@@ -829,4 +862,26 @@ header > a:hover {
   0% {
     scale: 1.5;
   }
+  100% {
+    scale: 1;
+  }
 }
+@media screen and (max-width: 767px) {
+  .contact-gif dotlottie-player {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .contact form {
+    max-width: auto;
+  }
+  
+  .contact h2 {
+    font-size: 30px;
+  }
+
+  
+}
+
+
+
